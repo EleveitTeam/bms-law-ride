@@ -1,12 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
+import WhyChooseUs from "@/components/WhyChooseUs";
+import CasesWeHandle from "@/components/CasesWeHandle";
+import HowWeWork from "@/components/HowWeWork";
+import ImmediateSteps from "@/components/ImmediateSteps";
+import FAQ from "@/components/FAQ";
+import FreeTransport from "@/components/FreeTransport";
+import OurLawFirm from "@/components/OurLawFirm";
+import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
+import FinalCTA from "@/components/FinalCTA";
+import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background font-montserrat">
+      <Navigation />
+      <main>
+        <Hero />
+        <WhyChooseUs />
+        <CasesWeHandle />
+        <HowWeWork />
+        <ImmediateSteps />
+        <FAQ />
+        <FreeTransport />
+        <OurLawFirm />
+        <Testimonials />
+        <Contact />
+        <FinalCTA />
+      </main>
+      <Footer />
+      <WhatsAppFloat />
     </div>
   );
 };
