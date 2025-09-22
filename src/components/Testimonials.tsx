@@ -5,25 +5,19 @@ import { Star, Quote } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Maria Rodriguez",
-      case: "Car Accident Settlement",
-      quote: "After my car accident, I was overwhelmed and didn't know where to turn. BMS Law Firm took care of everything and got me the compensation I needed to recover. They kept me informed every step of the way through WhatsApp, which made everything so much easier.",
+      name: "F.S.",
+      quote: "Me guiaron en todo. Cobramos sin adelantar nada.",
       rating: 5,
-      settlement: "$125,000"
     },
     {
-      name: "James Chen",
-      case: "Pedestrian Accident",
-      quote: "I was hit by a taxi while crossing the street in Manhattan. The BMS team was incredible - they even provided free transportation to their office since I couldn't drive. They fought hard for me and secured a settlement that covered all my medical bills and more.",
+      name: "L.B.",
+      quote: "Rápidos y claros. Los recomiendo.",
       rating: 5,
-      settlement: "$95,000"
     },
     {
-      name: "Sarah Johnson",
-      case: "Motorcycle Accident",
-      quote: "When my motorcycle was hit by an uninsured driver, I thought I was out of luck. BMS Law Firm found other ways to get me compensated and didn't charge me anything upfront. Their 24/7 availability made all the difference during my recovery.",
+      name: "F.G.",
+      quote: "Excelente trato y resultado.",
       rating: 5,
-      settlement: "$180,000"
     }
   ];
 
@@ -32,10 +26,10 @@ const Testimonials = () => {
       <div className="max-w-7xl mx-auto container-padding">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 font-montserrat">
-            Real <span className="text-primary">experiences</span>
+            Experiencias <span className="text-primary">reales</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Don't just take our word for it. See what our clients have to say about their experience with BMS Law Firm.
+            Testimonios de personas que confiaron en nosotros para resolver su caso.
           </p>
         </div>
 
@@ -43,7 +37,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial, index) => (
             <Card 
               key={index}
-              className="hover-lift animate-scale-in border-border hover:border-primary/20 transition-all duration-300 h-full"
+              className="hover-lift animate-scale-in border-border hover:border-primary/20 transition-colors duration-300 h-full"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6 h-full flex flex-col">
@@ -61,16 +55,7 @@ const Testimonials = () => {
                 </blockquote>
                 
                 <div className="border-t border-border pt-4">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="font-semibold text-foreground font-montserrat">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground font-montserrat">{testimonial.case}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-sm text-muted-foreground font-montserrat">Settlement</p>
-                      <p className="font-bold text-primary font-montserrat">{testimonial.settlement}</p>
-                    </div>
-                  </div>
+                  <p className="font-semibold text-foreground font-montserrat">{testimonial.name}</p>
                 </div>
               </CardContent>
             </Card>
@@ -83,7 +68,7 @@ const Testimonials = () => {
             size="lg"
             className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 text-lg px-8 py-4 rounded-full shadow-elegant font-montserrat font-semibold"
           >
-            Have my case reviewed
+            Quiero que revisen mi caso
           </Button>
         </div>
       </div>

@@ -7,32 +7,32 @@ const HowWeWork = () => {
     {
       number: "1",
       icon: <MessageCircle className="w-8 h-8" />,
-      title: "Contact us",
-      description: "Reach out via WhatsApp, phone, or our website for immediate assistance"
+      title: "Nos escribís por WhatsApp",
+      description: "Contanos qué pasó y recibí asistencia inmediata"
     },
     {
       number: "2",
       icon: <FileSearch className="w-8 h-8" />,
-      title: "Free review",
-      description: "We evaluate your case at no cost and determine your compensation potential"
+      title: "Evaluamos el caso",
+      description: "Sin costo: te decimos qué conviene hacer"
     },
     {
       number: "3",
       icon: <FileText className="w-8 h-8" />,
-      title: "Documentation",
-      description: "We gather all necessary evidence, medical records, and witness statements"
+      title: "Reunimos documentación",
+      description: "Médica, del siniestro y cualquier otra prueba"
     },
     {
       number: "4",
       icon: <Scale className="w-8 h-8" />,
-      title: "Filing",
-      description: "Our legal team files your claim and handles all legal proceedings"
+      title: "Iniciamos el reclamo",
+      description: "Ante la aseguradora o vía judicial"
     },
     {
       number: "5",
       icon: <DollarSign className="w-8 h-8" />,
-      title: "Settlement/Judgment",
-      description: "We secure your compensation through negotiation or court proceedings"
+      title: "Acuerdo o sentencia",
+      description: "Cobramos recién cuando vos cobrás"
     }
   ];
 
@@ -41,10 +41,10 @@ const HowWeWork = () => {
       <div className="max-w-7xl mx-auto container-padding">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 font-montserrat">
-            <span className="text-primary">5</span> clear steps
+            <span className="text-primary">5</span> pasos claros
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Our streamlined process makes it easy for you to get the compensation you deserve.
+            Así trabajamos para que tu reclamo avance sin vueltas ni gastos por adelantado.
           </p>
         </div>
 
@@ -72,14 +72,6 @@ const HowWeWork = () => {
                   </p>
                 </CardContent>
               </Card>
-              {/* Arrow for desktop */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-primary z-10">
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-              )}
             </div>
           ))}
         </div>
@@ -90,7 +82,7 @@ const HowWeWork = () => {
             size="lg"
             className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 text-lg px-8 py-4 rounded-full shadow-elegant font-montserrat font-semibold"
           >
-            Start your free case review
+            Iniciar evaluación ahora
           </Button>
         </div>
       </div>

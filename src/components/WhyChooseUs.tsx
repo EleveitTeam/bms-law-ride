@@ -6,23 +6,23 @@ const WhyChooseUs = () => {
   const benefits = [
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "No upfront fees – we only charge at the end, if you win.",
-      description: "You don't pay unless we win your case"
+      title: "Solo honorarios al final (si ganás).",
+      description: "No pagás nada hasta ganar el caso"
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "We cover filing and case expenses.",
-      description: "All legal costs covered by us"
+      title: "Financiamos gastos de inicio y gestión.",
+      description: "Todos los costos legales corren por nuestra cuenta"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Dedicated traffic team: cars, motorcycles, pedestrians, taxis, buses, trains/subway.",
-      description: "Specialists in all traffic accident types"
+      title: "Equipo dedicado a tránsito",
+      description: "Especialistas en todo tipo de accidentes de tránsito"
     },
     {
       icon: <Phone className="w-6 h-6" />,
-      title: "24/7 WhatsApp assistance.",
-      description: "Always available when you need us"
+      title: "Atención 24/7 por WhatsApp.",
+      description: "Siempre disponibles cuando nos necesites"
     }
   ];
 
@@ -31,10 +31,10 @@ const WhyChooseUs = () => {
       <div className="max-w-7xl mx-auto container-padding">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 font-montserrat">
-            Your claim, <span className="text-primary">made simple</span>
+            Tu reclamo, <span className="text-primary">sin vueltas</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto font-montserrat leading-relaxed">
-            With years of experience in traffic accident liability cases, we know how to move your case forward without you having to advance money or waste time.
+          <p className="text-lg md:text-xl text-muted-foreground text-balance max-w-4xl mx-auto font-montserrat leading-relaxed">
+            Trabajamos hace años en responsabilidad civil por accidentes de tránsito. Sabemos cómo mover el caso para que avances sin adelantar plata ni perder tiempo.
           </p>
         </div>
 
@@ -54,7 +54,6 @@ const WhyChooseUs = () => {
                   </div>
                   <div className="flex-1">
                     <div className="flex items-start mb-2">
-                      <Check className="w-5 h-5 text-primary flex-shrink-0 mr-2 mt-0.5" />
                       <h3 className="text-lg font-semibold text-foreground font-montserrat leading-tight">
                         {benefit.title}
                       </h3>
@@ -76,7 +75,7 @@ const WhyChooseUs = () => {
             className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 text-lg px-8 py-4 rounded-full shadow-elegant font-montserrat font-semibold"
           >
             <MessageCircle className="w-5 h-5 mr-2" />
-            Chat with us on WhatsApp
+            Escribinos ahora por WhatsApp
           </Button>
         </div>
       </div>

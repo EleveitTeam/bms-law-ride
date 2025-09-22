@@ -9,24 +9,24 @@ import {
 const FAQ = () => {
   const faqs = [
     {
-      question: "How much does it cost to hire you?",
-      answer: "We work on a contingency fee basis, which means you don't pay unless we win your case. We only get paid when you receive your compensation, and there are no upfront fees or costs."
+      question: "¿Cuánto cuesta contratar un abogado por un accidente de tránsito?",
+      answer: "La primera consulta es gratis. No pagás adelantos: los honorarios se cobran al final, solo si cobrás."
     },
     {
-      question: "How long do I have to file a claim after an accident?",
-      answer: "In New York, the statute of limitations for personal injury claims is generally 3 years from the date of the accident. However, there are exceptions, and it's crucial to start the process as soon as possible to preserve evidence and strengthen your case."
+      question: "¿Cuánto tiempo tengo para reclamar?",
+      answer: "Hay plazos legales que pueden ser de hasta 2 años, pero conviene actuar cuanto antes para preservar pruebas."
     },
     {
-      question: "What if the other driver doesn't have insurance?",
-      answer: "If the at-fault driver is uninsured or underinsured, you may still be able to recover compensation through your own insurance policy's uninsured motorist coverage, or through other avenues. We'll explore all possible options for your case."
+      question: "¿Puedo reclamar si el otro no tenía seguro o se dio a la fuga?",
+      answer: "Puede haber vías alternativas (fondos, demandas, identificación por actas o cámaras). Revisamos tu caso."
     },
     {
-      question: "Can I still file a claim if I was partially at fault?",
-      answer: "Yes, New York follows a comparative negligence rule. Even if you were partially at fault, you may still be entitled to compensation, though it may be reduced by your percentage of fault. We'll help determine the best strategy for your situation."
+      question: "¿Qué documentos necesito?",
+      answer: "DNI, constancia del siniestro, datos del vehículo/seguro, estudios médicos y todo lo que acredite el hecho y las lesiones."
     },
     {
-      question: "How long does the legal process typically take?",
-      answer: "The timeline varies depending on the complexity of your case, the severity of injuries, and whether we can reach a settlement or need to go to trial. Simple cases may resolve in a few months, while complex cases can take 1-2 years or more. We'll keep you informed throughout the process."
+      question: "¿Cuánto tarda un reclamo?",
+      answer: "Depende del caso y la lesión. Buscamos acuerdos rápidos cuando convienen; si no, vamos por la vía judicial."
     }
   ];
 
@@ -35,10 +35,10 @@ const FAQ = () => {
       <div className="max-w-4xl mx-auto container-padding">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6 font-montserrat">
-            Common questions, <span className="text-primary">simple answers</span>
+            Preguntas <span className="text-primary">frecuentes</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground font-montserrat leading-relaxed">
-            Get answers to the most frequently asked questions about traffic accident claims.
+          <p className="text-lg md:text-xl text-muted-foreground font-montserrat text-balance leading-relaxed">
+            Respondemos las preguntas más frecuentes sobre reclamos por accidentes de tránsito.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ const FAQ = () => {
             size="lg"
             className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 text-lg px-8 py-4 rounded-full shadow-elegant font-montserrat font-semibold"
           >
-            Talk to a lawyer now
+            Hablá con un abogado ahora
           </Button>
         </div>
       </div>

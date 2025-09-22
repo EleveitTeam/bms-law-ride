@@ -6,28 +6,28 @@ const ImmediateSteps = () => {
   const steps = [
     {
       icon: <Heart className="w-6 h-6" />,
-      title: "Medical attention",
-      description: "Seek immediate medical care for any injuries, no matter how minor they seem"
+      title: "Atención médica",
+      description: "Pedí atención médica y guardá todo informe"
     },
     {
       icon: <Camera className="w-6 h-6" />,
-      title: "Photos",
-      description: "Take pictures of the accident scene, vehicles, injuries, and road conditions"
+      title: "Fotos",
+      description: "Sacá fotos del lugar, vehículos y lesiones"
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Witness info",
-      description: "Collect contact information from witnesses who saw the accident happen"
+      title: "Testigos y póliza",
+      description: "Tomá datos de testigos y póliza"
     },
     {
       icon: <FileText className="w-6 h-6" />,
-      title: "Police/insurance report",
-      description: "File a police report and notify your insurance company immediately"
+      title: "Denuncia",
+      description: "Hacé la denuncia policial y en la aseguradora"
     },
     {
       icon: <MessageCircle className="w-6 h-6" />,
-      title: "Contact via WhatsApp",
-      description: "Reach out to us immediately for legal guidance and case evaluation"
+      title: "Escribinos",
+      description: "Te guiamos en el momento"
     }
   ];
 
@@ -36,13 +36,12 @@ const ImmediateSteps = () => {
       <div className="max-w-7xl mx-auto container-padding">
         <div className="text-center mb-16 animate-fade-in">
           <div className="flex items-center justify-center mb-4">
-            <AlertTriangle className="w-8 h-8 text-primary mr-3" />
             <h2 className="text-3xl md:text-5xl font-bold text-foreground font-montserrat">
-              Don't lose <span className="text-primary">key evidence</span>
+              Qué hacer para <br></br> <span className="text-primary">no perder pruebas</span>
             </h2>
           </div>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto font-montserrat leading-relaxed">
-            Taking the right steps immediately after an accident can make or break your case.
+          <p className="text-lg md:text-xl text-muted-foreground text-balance max-w-3xl mx-auto font-montserrat leading-relaxed">
+            Lo urgente después del accidente: seguí estos pasos simples para cuidar tu reclamo.
           </p>
         </div>
 
@@ -75,7 +74,7 @@ const ImmediateSteps = () => {
             className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 text-lg px-8 py-4 rounded-full shadow-elegant font-montserrat font-semibold"
           >
             <MessageCircle className="w-5 h-5 mr-2" />
-            Get WhatsApp assistance now
+            Asistencia por WhatsApp ahora
           </Button>
         </div>
       </div>
