@@ -1,9 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from "@/components/ui/carousel";
 import { MessageCircle, CheckCircle, Phone } from "lucide-react";
-import teamPhoto from "@/assets/team-photo.jpg";
+import team1 from "@/assets/team1.webp";
+import team2 from "@/assets/team2.webp";
+import team3 from "@/assets/team3.webp";
 
 const OurLawFirm = () => {
+  const teamSlides = [
+    { src: team1, alt: "Equipo de BMS Abogados compartiendo una reunión" },
+    { src: team2, alt: "Abogados de BMS analizando documentación" },
+    { src: team3, alt: "Equipo de BMS celebrando un logro legal" }
+  ];
+
   const trustBadges = [
     {
       icon: <MessageCircle className="w-6 h-6" />,
@@ -32,15 +47,26 @@ const OurLawFirm = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Team Photo */}
+          {/* Team Photo Carousel */}
           <div className="animate-scale-in">
             <Card className="overflow-hidden border-border hover:border-primary/20 transition-colors duration-300">
-              <CardContent className="p-0">
-                <img
-                  src={teamPhoto}
-                  alt="Equipo de BMS Abogados"
-                  className="w-full h-96 object-cover"
-                />
+              <CardContent className="p-0 relative">
+                <Carousel opts={{ loop: true }} className="w-full">
+                  <CarouselContent>
+                    {teamSlides.map((slide, index) => (
+                      <CarouselItem key={index}>
+                        <img
+                          src={slide.src}
+                          alt={slide.alt}
+                          className="w-full h-96 object-cover object-top"
+                          loading={index === 0 ? "eager" : "lazy"}
+                        />
+                      </CarouselItem>
+                    ))}
+                  </CarouselContent>
+                  <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2 bg-white/80 !text-black border-none shadow-elegant hover:bg-white focus-visible:ring-primary/60" />
+                  <CarouselNext className="right-4 top-1/2 -translate-y-1/2 bg-white/80 !text-black border-none shadow-elegant hover:bg-white focus-visible:ring-primary/60" />
+                </Carousel>
               </CardContent>
             </Card>
           </div>
@@ -49,11 +75,7 @@ const OurLawFirm = () => {
           <div className="animate-fade-in">
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground font-montserrat leading-relaxed">
-                Somos un equipo dedicado a daños y perjuicios por accidentes de tránsito. 
-                Te acompañamos de punta a punta: escuchamos, explicamos y avanzamos. 
-              </p>
-              <p className="text-lg text-muted-foreground font-montserrat leading-relaxed">
-                También atendemos casos de ART y penal, pero nuestro foco es tránsito.
+                Somos un equipo dedicado daños y perjuicios por accidentes de tránsito e incumplimiento contractual. Nos diferenciamos de otros estudios porque tenemos experiencia tanto en parte actora como parte demandada. Es decir, conocemos ambas caras de la moneda. Además contamos con equipo interdisciplinario y te acompañamos en cada paso. También atendemos casos penales, de art y sucesiones. Por eso no dudes en elegirnos, ya que podemos darte respuesta como abogados integrales en cada situación que se te presente. Cada caso es nuestra prioridad, por eso cuidamos tus intereses y te acompañamos en cada estadio del proceso, porque sabemos lo que implica para vos pasar por un accidente, es por eso que siendo tus mejores aliados peleamos por tus derechos hasta obtener el mejor resultado.
               </p>
             </div>
           </div>
@@ -64,7 +86,7 @@ const OurLawFirm = () => {
           {trustBadges.map((badge, index) => (
             <Card 
               key={index}
-              className="hover-lift animate-scale-in border-border hover:border-primary/20 transition-colors duration-300"
+              className="hover-lift animate-scale-in border-border hover:border-primary/20 transition-all duration-300 cursor-pointer group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6 text-center">

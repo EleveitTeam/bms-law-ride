@@ -31,17 +31,17 @@ const Navigation = () => {
 
   const navBase =
     "fixed top-0 left-0 right-0 z-50 transition-colors duration-300";
-  const navState = isTop
+  const navState = (isTop && !isOpen)
     ? "bg-transparent border-transparent"
     : "bg-white/95 backdrop-blur-md border-b border-border shadow-sm";
 
   const linkBase =
     "transition-colors font-medium font-montserrat";
-  const linkState = isTop
+  const linkState = (isTop)
     ? "text-white hover:text-white/80"
     : "text-foreground hover:text-primary";
 
-  const logoText = isTop ? "text-white" : "text-foreground";
+  const logoText = (isTop && !isOpen) ? "text-white" : "text-foreground";
 
   return (
     <nav className={`${navBase} ${navState}`}>
@@ -55,7 +55,7 @@ const Navigation = () => {
           </div>
 
           {/* Navegación Desktop */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             <ul className="flex items-center space-x-8">
               {navigationItems.map((item) => (
                 <li key={item.label}>
@@ -71,39 +71,23 @@ const Navigation = () => {
           </div>
 
           {/* Botones CTA */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <Button
-              onClick={() => scrollToSection("#contact")}
-              variant={isTop ? "secondary" : "outline"}
-              size="sm"
-              className={`font-montserrat ${
-                isTop
-                  ? "bg-white text-primary hover:bg-white/90"
-                  : ""
-              }`}
-            >
-              <Phone className="w-4 h-4 mr-2" />
-              Llamanos
-            </Button>
-            <Button
-              onClick={() =>
-                window.open("https://wa.me/1234567890", "_blank")
-              }
+onClick={() => scrollToSection("#contact")}
               className="bg-gradient-primary hover:opacity-90 font-montserrat"
               size="sm"
             >
-              <MessageCircle className="w-4 h-4 mr-2" />
-              Consultá gratis
+              Contactanos
             </Button>
           </div>
 
           {/* Botón menú móvil */}
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setIsOpen(!isOpen)}
-              className={isTop ? "text-white" : ""}
+              className={(isTop && !isOpen) ? "text-white" : ""}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -112,8 +96,8 @@ const Navigation = () => {
 
         {/* Navegación móvil */}
         {isOpen && (
-          <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-border">
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 border-t border-border">
               {navigationItems.map((item) => (
                 <button
                   key={item.label}
@@ -127,22 +111,10 @@ const Navigation = () => {
               <div className="px-3 py-2 space-y-2">
                 <Button
                   onClick={() => scrollToSection("#contact")}
-                  variant="outline"
-                  size="sm"
-                  className="w-full font-montserrat"
-                >
-                  <Phone className="w-4 h-4 mr-2" />
-                  Llamanos
-                </Button>
-                <Button
-                  onClick={() =>
-                    window.open("https://wa.me/1234567890", "_blank")
-                  }
                   className="w-full bg-gradient-primary hover:opacity-90 font-montserrat"
                   size="sm"
                 >
-                  <MessageCircle className="w-4 h-4 mr-2" />
-                  Consultá gratis
+                  Contactanos
                 </Button>
               </div>
             </div>

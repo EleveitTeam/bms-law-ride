@@ -56,7 +56,7 @@ const ImmediateSteps = () => {
                 <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-4">
                   {step.icon}
                 </div>
-                <h3 className="text-base font-semibold text-foreground mb-3 font-montserrat">
+                <h3 className="text-lg font-semibold text-foreground mb-3 font-montserrat">
                   {step.title}
                 </h3>
                 <p className="text-muted-foreground text-sm font-montserrat flex-1">
@@ -71,9 +71,10 @@ const ImmediateSteps = () => {
           <Button
             onClick={() => window.open("https://wa.me/1234567890", "_blank")}
             size="lg"
-            className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 text-lg px-8 py-4 rounded-full shadow-elegant font-montserrat font-semibold"
-          >
-            <MessageCircle className="w-5 h-5 mr-2" />
+            className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 
+                      text-base sm:text-lg md:text-xl 
+                      px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 
+                      rounded-full shadow-elegant font-montserrat font-semibold w-auto"          >
             Asistencia por WhatsApp ahora
           </Button>
         </div>

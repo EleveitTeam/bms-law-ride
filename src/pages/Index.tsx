@@ -28,7 +28,7 @@ const Index = () => {
         <OurLawFirm />
         <Testimonials />
         <Contact />
-        <FinalCTA />
+        {/* <FinalCTA /> */}
       </main>
       <Footer />
       <WhatsAppFloat />

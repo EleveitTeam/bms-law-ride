@@ -10,7 +10,7 @@ const FinalCTA = () => {
           <CardContent className="p-12 text-center relative">
             <div className="relative z-10">
               <h2 className="text-3xl md:text-5xl font-bold text-primary-foreground mb-6 font-montserrat">
-                Consultá gratis por WhatsApp
+                Consultá por WhatsApp
               </h2>
 
               <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 font-montserrat leading-relaxed">

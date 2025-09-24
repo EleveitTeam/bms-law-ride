@@ -80,8 +80,10 @@ const HowWeWork = () => {
           <Button
             onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
             size="lg"
-            className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 text-lg px-8 py-4 rounded-full shadow-elegant font-montserrat font-semibold"
-          >
+            className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 
+                      text-base sm:text-lg md:text-xl 
+                      px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 
+                      rounded-full shadow-elegant font-montserrat font-semibold w-auto"          >
             Iniciar evaluación ahora
           </Button>
         </div>

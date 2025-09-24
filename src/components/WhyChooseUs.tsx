@@ -34,7 +34,7 @@ const WhyChooseUs = () => {
             Tu reclamo, <span className="text-primary">sin vueltas</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground text-balance max-w-4xl mx-auto font-montserrat leading-relaxed">
-            Trabajamos hace años en responsabilidad civil por accidentes de tránsito. Sabemos cómo mover el caso para que avances sin adelantar plata ni perder tiempo.
+            Hace más de 15 años nos dedicamos a llevar adelante reclamos judiciales por accidentes de tránsito. Contamos con un equipo interdisciplinario compuesto por abogados, médicos legistas, psicólogos, ingenieros mecánicos, entre otros. Sabemos cómo lograr el mejor resultado en el menor tiempo posible.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
           {benefits.map((benefit, index) => (
             <Card 
               key={index} 
-              className="hover-lift animate-scale-in border-border hover:border-primary/20 transition-colors duration-300"
+              className="hover-lift animate-scale-in border-border hover:border-primary/20 transition-all duration-300 cursor-pointer group"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-6">
@@ -72,9 +72,11 @@ const WhyChooseUs = () => {
           <Button
             onClick={() => window.open("https://wa.me/1234567890", "_blank")}
             size="lg"
-            className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 text-lg px-8 py-4 rounded-full shadow-elegant font-montserrat font-semibold"
+            className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 
+                      text-base sm:text-lg md:text-xl 
+                      px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 
+                      rounded-full shadow-elegant font-montserrat font-semibold w-auto"
           >
-            <MessageCircle className="w-5 h-5 mr-2" />
             Escribinos ahora por WhatsApp
           </Button>
         </div>

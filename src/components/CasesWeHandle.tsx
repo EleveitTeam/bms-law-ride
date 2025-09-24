@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Car, Bike, UserX, CarTaxiFront, Bus, Train, AlertTriangle, HelpCircle } from "lucide-react";
+import { 
+  Car, Bike, UserX, CarTaxiFront, Bus, Train, 
+  AlertTriangle, HelpCircle, ShieldAlert 
+} from "lucide-react";
 
 const CasesWeHandle = () => {
   const cases = [
@@ -43,8 +46,14 @@ const CasesWeHandle = () => {
       icon: <HelpCircle className="w-8 h-8" />,
       title: "Siniestros con fuga",
       description: "Identificación y coberturas posibles"
+    },
+    {
+      icon: <ShieldAlert className="w-8 h-8" />,
+      title: "Robo de vehículos y destrucción total",
+      description: "Cobertura frente a hurto o pérdida total del rodado"
     }
   ];
+
 
   return (
     <section id="cases" className="section-padding bg-muted/30">
@@ -55,7 +64,7 @@ const CasesWeHandle = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {cases.map((caseType, index) => (
             <Card 
               key={index} 
@@ -82,8 +91,10 @@ const CasesWeHandle = () => {
           <Button
             onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
             size="lg"
-            className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 text-lg px-8 py-4 rounded-full shadow-elegant font-montserrat font-semibold"
-          >
+            className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 
+                      text-base sm:text-lg md:text-xl 
+                      px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 
+                      rounded-full shadow-elegant font-montserrat font-semibold w-auto"          >
             Quiero saber si mi caso corresponde
           </Button>
         </div>

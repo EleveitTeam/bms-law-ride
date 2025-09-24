@@ -14,7 +14,7 @@ const FAQ = () => {
     },
     {
       question: "¿Cuánto tiempo tengo para reclamar?",
-      answer: "Hay plazos legales que pueden ser de hasta 2 años, pero conviene actuar cuanto antes para preservar pruebas."
+      answer: "Hay plazos legales que pueden ser de hasta 3 años y en caso de incumplimiento contractual es 1 año desde la fecha del siniestro. Pero conviene actuar cuanto antes para preservar pruebas."
     },
     {
       question: "¿Puedo reclamar si el otro no tenía seguro o se dio a la fuga?",
@@ -50,7 +50,7 @@ const FAQ = () => {
                 value={`item-${index}`}
                 className="border border-border rounded-lg px-6 hover:border-primary/20 transition-colors duration-300"
               >
-                <AccordionTrigger className="text-left font-semibold text-foreground font-montserrat hover:text-primary transition-colors">
+                <AccordionTrigger className="text-left font-semibold text-foreground !no-underline font-montserrat hover:text-primary transition-colors">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground font-montserrat leading-relaxed">
@@ -65,8 +65,10 @@ const FAQ = () => {
           <Button
             onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
             size="lg"
-            className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 text-lg px-8 py-4 rounded-full shadow-elegant font-montserrat font-semibold"
-          >
+            className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 
+                      text-base sm:text-lg md:text-xl 
+                      px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 
+                      rounded-full shadow-elegant font-montserrat font-semibold w-auto"          >
             Hablá con un abogado ahora
           </Button>
         </div>
