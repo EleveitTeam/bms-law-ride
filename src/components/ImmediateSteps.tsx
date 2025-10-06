@@ -69,23 +69,28 @@ const ImmediateSteps = () => {
 
         <div className="text-center">
           <Button
-            onClick={() => {
-              (window as any).dataLayer = (window as any).dataLayer || [];
-              (window as any).dataLayer.push({
-                event: 'whatsapp_click',
-                button_text: 'Asistencia por WhatsApp ahora',
-                button_location: 'ImmediateSteps'
-              });
-              setTimeout(() => {
-                window.open("https://wa.me/5491160219178", "_blank");
-              }, 300);
-            }}
+            asChild
             size="lg"
             className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 
                       text-base sm:text-lg md:text-xl 
                       px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 
                       rounded-full shadow-elegant font-montserrat font-semibold w-auto"          >
-            Asistencia por WhatsApp ahora
+            <a
+              href="https://wa.me/5491160219178"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                (window as any).dataLayer = (window as any).dataLayer || [];
+                (window as any).dataLayer.push({
+                  event: 'whatsapp_click',
+                  button_text: 'Asistencia por WhatsApp ahora',
+                  button_location: 'ImmediateSteps'
+                });
+              }}
+              aria-label="Asistencia por WhatsApp ahora"
+            >
+              Asistencia por WhatsApp ahora
+            </a>
           </Button>
         </div>
       </div>

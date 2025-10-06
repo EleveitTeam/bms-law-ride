@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import heroBackground from "@/assets/hero.webp";
-import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 
 const Hero = () => {
   return (
@@ -35,23 +34,29 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button
-              onClick={() => {
-                (window as any).dataLayer = (window as any).dataLayer || [];
-                (window as any).dataLayer.push({
-                  event: 'whatsapp_click',
-                  button_text: 'Valoración gratuita por WhatsApp',
-                  button_location: 'Hero'
-                });
-                setTimeout(() => {
-                  window.open("https://wa.me/5491160219178", "_blank");
-                }, 300);
-              }}
+              asChild
               size="lg"
-            className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 
-                      text-base sm:text-lg md:text-xl 
-                      px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 
-                      rounded-full shadow-elegant font-montserrat font-semibold sm:w-auto"            >
-              Valoración gratuita por WhatsApp
+              className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 
+                        text-base sm:text-lg md:text-xl 
+                        px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 
+                        rounded-full shadow-elegant font-montserrat font-semibold sm:w-auto"
+            >
+              <a
+                href="https://wa.me/5491160219178"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  (window as any).dataLayer = (window as any).dataLayer || [];
+                  (window as any).dataLayer.push({
+                    event: 'whatsapp_click',
+                    button_text: 'Valoración gratuita por WhatsApp',
+                    button_location: 'Hero'
+                  });
+                }}
+                aria-label="Valoración gratuita por WhatsApp"
+              >
+                Valoración gratuita por WhatsApp
+              </a>
             </Button>
           </div>
 
