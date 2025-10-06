@@ -25,19 +25,11 @@ const FinalCTA = () => {
                   className="bg-white text-primary hover:bg-white/90 hover:scale-105 transition-all duration-300 text-xl px-10 py-5 rounded-full shadow-lg font-montserrat font-bold"
                 >
                   <a
-                    href="https://wa.me/5491160219178"
+                    href="https://wa.me/541160219178"
                     target="_blank"
                     rel="noopener noreferrer"
-                    onClick={() => {
-                      (window as any).dataLayer = (window as any).dataLayer || [];
-                      (window as any).dataLayer.push({
-                        event: 'whatsapp_click',
-                        button_text: 'Envíanos un mensaje',
-                        button_location: 'FinalCTA'
-                      });
-                    }}
                     aria-label="Envíanos un mensaje por WhatsApp"
-                    className="inline-flex items-center"
+                    className="whatsapp-link inline-flex items-center"
                   >
                     <MessageCircle className="w-6 h-6 mr-3" />
                     Envíanos un mensaje

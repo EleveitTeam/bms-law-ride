@@ -3,18 +3,10 @@ import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 const WhatsAppFloat = () => {
   return (
     <a
-      href="https://wa.me/5491160219178"
+      href="https://wa.me/541160219178"
       target="_blank"
       rel="noopener noreferrer"
-      onClick={() => {
-        (window as any).dataLayer = (window as any).dataLayer || [];
-        (window as any).dataLayer.push({
-          event: 'whatsapp_click',
-          button_text: 'WhatsApp Float Button',
-          button_location: 'Float'
-        });
-      }}
-      className="whatsapp-float"
+      className="whatsapp-float whatsapp-link"
       aria-label="Contact us on WhatsApp"
     >
       <WhatsAppIcon className="w-6 h-6" />

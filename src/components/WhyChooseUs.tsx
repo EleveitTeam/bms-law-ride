@@ -78,17 +78,10 @@ const WhyChooseUs = () => {
                       rounded-full shadow-elegant font-montserrat font-semibold w-auto"
           >
             <a
-              href="https://wa.me/5491160219178"
+              href="https://wa.me/541160219178"
+              className="whatsapp-link"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => {
-                (window as any).dataLayer = (window as any).dataLayer || [];
-                (window as any).dataLayer.push({
-                  event: 'whatsapp_click',
-                  button_text: 'Escribinos ahora por WhatsApp',
-                  button_location: 'WhyChooseUs'
-                });
-              }}
               aria-label="Escribinos ahora por WhatsApp"
             >
               Escribinos ahora por WhatsApp

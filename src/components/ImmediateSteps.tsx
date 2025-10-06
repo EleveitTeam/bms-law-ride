@@ -76,17 +76,10 @@ const ImmediateSteps = () => {
                       px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 
                       rounded-full shadow-elegant font-montserrat font-semibold w-auto"          >
             <a
-              href="https://wa.me/5491160219178"
+              href="https://wa.me/541160219178"
+              className="whatsapp-link"
               target="_blank"
               rel="noopener noreferrer"
-              onClick={() => {
-                (window as any).dataLayer = (window as any).dataLayer || [];
-                (window as any).dataLayer.push({
-                  event: 'whatsapp_click',
-                  button_text: 'Asistencia por WhatsApp ahora',
-                  button_location: 'ImmediateSteps'
-                });
-              }}
               aria-label="Asistencia por WhatsApp ahora"
             >
               Asistencia por WhatsApp ahora

@@ -42,17 +42,10 @@ const Hero = () => {
                         rounded-full shadow-elegant font-montserrat font-semibold sm:w-auto"
             >
               <a
-                href="https://wa.me/5491160219178"
+                href="https://wa.me/541160219178"
+                className="whatsapp-link"
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => {
-                  (window as any).dataLayer = (window as any).dataLayer || [];
-                  (window as any).dataLayer.push({
-                    event: 'whatsapp_click',
-                    button_text: 'Valoración gratuita por WhatsApp',
-                    button_location: 'Hero'
-                  });
-                }}
                 aria-label="Valoración gratuita por WhatsApp"
               >
                 Valoración gratuita por WhatsApp
