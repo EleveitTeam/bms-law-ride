@@ -4,7 +4,7 @@ import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 import { MessageCircle, Instagram, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {
-  const WHATSAPP_LINK = "https://wa.me/5491160930878";
+  const WHATSAPP_LINK = "https://wa.me/5491160219178";
   const IG_LINK = "https://instagram.com/bmsabogadosarg";
   const ADDRESS = "Hipólito Irigoyen 8774, 2º C – Lomas de Zamora";
   const MAPS_LINK = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(ADDRESS)}`;
