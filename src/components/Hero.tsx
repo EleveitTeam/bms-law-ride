@@ -41,7 +41,7 @@ const Hero = () => {
                       text-base sm:text-lg md:text-xl 
                       px-4 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 
                       rounded-full shadow-elegant font-montserrat font-semibold sm:w-auto"            >
-              Consultá gratis por WhatsApp
+              Valoración gratuita por WhatsApp
             </Button>
           </div>
 
