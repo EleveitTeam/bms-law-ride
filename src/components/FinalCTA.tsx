@@ -19,9 +19,17 @@ const FinalCTA = () => {
 
               <div className="flex justify-center">
                 <Button
-                  onClick={() =>
-                    window.open("https://wa.me/5491160219178", "_blank")
-                  }
+                  onClick={() => {
+                    (window as any).dataLayer = (window as any).dataLayer || [];
+                    (window as any).dataLayer.push({
+                      event: 'whatsapp_click',
+                      button_text: 'Envíanos un mensaje',
+                      button_location: 'FinalCTA'
+                    });
+                    setTimeout(() => {
+                      window.open("https://wa.me/5491160219178", "_blank");
+                    }, 300);
+                  }}
                   size="lg"
                   variant="secondary"
                   className="bg-white text-primary hover:bg-white/90 hover:scale-105 transition-all duration-300 text-xl px-10 py-5 rounded-full shadow-lg font-montserrat font-bold"

@@ -69,7 +69,17 @@ const ImmediateSteps = () => {
 
         <div className="text-center">
           <Button
-            onClick={() => window.open("https://wa.me/5491160219178", "_blank")}
+            onClick={() => {
+              (window as any).dataLayer = (window as any).dataLayer || [];
+              (window as any).dataLayer.push({
+                event: 'whatsapp_click',
+                button_text: 'Asistencia por WhatsApp ahora',
+                button_location: 'ImmediateSteps'
+              });
+              setTimeout(() => {
+                window.open("https://wa.me/5491160219178", "_blank");
+              }, 300);
+            }}
             size="lg"
             className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 
                       text-base sm:text-lg md:text-xl 
