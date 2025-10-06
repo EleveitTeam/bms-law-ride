@@ -3,7 +3,7 @@ import WhatsAppIcon from "@/components/icons/WhatsAppIcon";
 const WhatsAppFloat = () => {
   return (
     <button
-      onClick={() => window.open("https://wa.me/5491160930878", "_blank")}
+      onClick={() => window.open("https://wa.me/5491160219178", "_blank")}
       className="whatsapp-float"
       aria-label="Contact us on WhatsApp"
     >
