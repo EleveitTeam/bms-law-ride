@@ -69,7 +69,7 @@ const ImmediateSteps = () => {
 
         <div className="text-center">
           <Button
-            onClick={() => window.open("https://wa.me/1234567890", "_blank")}
+            onClick={() => window.open("https://wa.me/5491160219178", "_blank")}
             size="lg"
             className="bg-gradient-primary hover:opacity-90 hover:scale-105 transition-all duration-300 
                       text-base sm:text-lg md:text-xl 
